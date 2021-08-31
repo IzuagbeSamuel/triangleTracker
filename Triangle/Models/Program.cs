@@ -12,6 +12,11 @@ namespace Triangle.Program
       string stringFirstNumber = Console.ReadLine();
       string stringSecondNumber = Console.ReadLine();
       string stringThirdNumber = Console.ReadLine();
+      if (stringFirstNumber == "" || stringSecondNumber == "" || stringThirdNumber == "")
+      {
+        Console.WriteLine("Please fill in all inputs");
+        Main();
+      }
       int firstNumber = int.Parse(stringFirstNumber);
       int secondNumber = int.Parse(stringSecondNumber);
       int thirdNumber = int.Parse(stringThirdNumber);
@@ -32,8 +37,9 @@ namespace Triangle.Program
       {
         Console.WriteLine("Scalene Triangle, all side are not Equal");
       }
-      else {
-        Console.WriteLine("Cannot form a Triangle, Not all combinations make valid triangles. If any side is longer than the other two sides combined, the lengths cannot form a triangle.");
+      else if (stringFirstNumber == "" || stringSecondNumber == "" || stringThirdNumber == "")
+      {
+        Console.WriteLine("Please fill in all inputs");
       }
       Main();
     }
